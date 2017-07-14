@@ -1,0 +1,412 @@
+@import "../_variables";
+
+.f_p_color {
+    color: @primary-color;
+}
+
+.bg_p_color {
+    background: @primary-color;
+}
+
+.f_b_color {
+    color: @base-color;
+}
+
+.bg_b_color {
+    background: @base-color;
+}
+
+.f_s_color {
+    color: @second-color;
+}
+
+.bg_s_color {
+    background: @second-color;
+}
+
+.f_s_color {
+    color: @second-color;
+}
+
+.bg_s_color {
+    background: @second-color;
+}
+
+.opacity_06 {
+    opacity: @opacity;
+}
+
+.f_30 {
+    font-size: 30px;
+}
+
+.f_24 {
+    font-size: 24px;
+}
+
+.f_18 {
+    font-size: 18px;
+}
+
+.f_16 {
+    font-size: 16px;
+}
+
+.f_14 {
+    font-size: 14px;
+}
+
+.f_12 {
+    font-size: 12px;
+}
+
+.btn_b_r {
+    border-radius: 4px;
+}
+
+// 页头
+.head .top {
+    background: @headtop-bg-color;
+    border-bottom: 1px @headtop-border-color solid;
+}
+
+.head .top .wel {
+    color: @second-color;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.head .top li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    float: left;
+}
+
+.head .top li a {
+    color: @second-color;
+    padding: 0 15px;
+}
+
+.head .menu {
+    border-bottom: 2px @headmenu-border-color solid;
+}
+
+.head .logo {
+    width: 377px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.head .menu li {
+    height: 90px;
+    line-height: 90px;
+    font-size: 16px;
+    float: left;
+}
+
+.head .menu li a {
+    color: @base-color;
+    padding: 0 26px;
+}
+
+.head .menu li.active a, .head .top li a:hover, .head .menu li a:hover {
+    color: @primary-color;
+}
+
+.head .top li:last-child a, .head .menu li:last-child a {
+    padding-right: 0; 
+}
+
+//页尾
+.foot {
+    background: @base-color;
+}
+
+.foot ul {
+    width: 850px;
+    margin: 0 auto;
+}
+
+.foot li {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 12px;
+}
+
+.foot li a {
+    color: @white-color;
+    opacity: 0.7;
+    padding: 0 10px;
+    border-right: @white-color 2px solid;
+}
+
+.foot li:last-child a {
+    border-right: 0;
+}
+
+.foot .copyright, .foot .address {
+    color: @white-color;
+    opacity: 0.6;
+    font-size: 12px;
+    text-align: center;
+}
+
+.foot .address {
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+//designer-list
+.designer{
+    li{
+        box-sizing: border-box;
+        width: 284px;
+        float: left;
+        margin-right:18px;
+        margin-bottom:30px;
+        a{
+            /* border: 1px solid red; */
+            position: relative;
+            overflow: hidden;  
+            .img{
+                width: 100%;
+            }
+            .index{
+                display: block;
+                width: 52px;
+                height: 30px;
+                position: absolute;
+                right:10px;
+                bottom:90px;
+                border-radius:15px;
+                /* opacity: 0.4; */
+                text-align: center;
+                line-height: 30px;
+                font-size: 12px;
+                corlor:#fff; 
+                background-color: rgba(0,0,0,0.5); 
+                border: 1px solid #f2f2f2; 
+            }
+                .touxiang{
+                    box-sizing: border-box;
+                    height: 80px;
+                    padding-top:16px;
+                    padding-left:20px;
+                    padding-bottom: 16px;
+                    border: 1px solid #f2f2f2;
+                .tou{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 25px;
+                    float: left;
+                    overflow: hidden;
+                }
+                .des{
+                    margin-left: 22px;
+                    float:left;
+                    line-height: 1.5;
+                    .name{
+                        font-size:14px;
+                        color:#333333; 
+                    }
+                    .style{
+                    font-size: 12px;
+                    color: #999999;
+                    }                
+                }
+            }          
+
+        }
+        &:hover{
+             border: 1px solid  @primary-color; 
+
+        }
+        
+
+
+    }
+    /* &:nth-child(4n){
+        margin-right:0;
+    } */
+}
+//控制第四个li的右边距为0
+.designer li:nth-child(4n){
+    margin-right:0;
+} 
+//页尾空隙
+.h40 {
+    height: 40px;
+    width: 100%;
+}
+.h80{
+    height: 80px;
+    width: 100%;
+}
+
+
+//设计师详情页detail
+.detail{
+    .detail_des{ 
+        .des_big{
+            margin:auto;
+            width: 770px;
+            height: 520px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+            }
+        }
+        .des_small{
+            padding:14px 55px;
+            position: relative;
+            background-color: #f2f2f2;
+            font-size: 30px;
+            color: #bababa;
+            .before{
+                position: absolute;
+                top:0px;
+                left:0px;
+                color: @primary-color;
+                display: inline-block;
+                width: 55px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+            ul{
+                li{
+                    width: 72px;
+                    height: 72px;
+                    float: left;
+                    margin-right: 11px;
+                    img{
+                        width: 100%;
+
+                    }
+                }
+                &:nth-last-child(1){
+                    margin-right:0;
+                }
+            }
+            .after{
+                position: absolute;
+                top:0px;
+                right:0px;
+                display: inline-block;
+                width: 55px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                color:#bababa ;
+
+            }
+        }
+        .des_collect{
+            height: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .left{
+                float: left;
+                ul{
+                    li{
+                        margin-right: 20px;
+                        float:left;
+                        a{
+                            border: 1px solid @step-line-color;
+                            padding-left: 40px;
+                            box-sizing: border-box;
+                            width: 110px;
+                            height: 36px;
+                            display: block;
+                            border-radius: 18px;
+                            color:#333333;
+                            text-align: center;
+                            line-height: 36px;
+                            background-image: url(../../../assets/images/detail_sprict.jpg);
+                            background-origin: border-box;
+                            background-repeat: no-repeat;
+
+                            p{
+                                line-height: 36px;
+                                height: 36px;
+                                margin-top:0;
+                                margin-bottom: 0;
+                                font-size: 14px;
+                                span{
+
+                                }
+                            }
+                        }
+
+                    }
+                    
+                }
+            }
+            .right{
+                float:right;
+                ul{
+                    li{
+                        float:left;
+                        line-height: 30px;
+                        margin-left: 10px;
+                        color: @step-line-color;
+                        a{
+                            width: 30px;
+                            height: 30px;
+                            display: block;
+                            border-radius: 50%;
+
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.detail .des_collect .right li:nth-child(2) a{
+    background:url(../../../assets/images/detail_sprict.jpg)no-repeat 0 0px;
+}
+.detail .des_collect .right li:nth-child(3) a{
+    background:url(../../../assets/images/detail_sprict.jpg)no-repeat 0 -33px;
+}
+.detail .des_collect .right li:nth-child(4) a{
+    background:url(../../../assets/images/detail_sprict.jpg)no-repeat 0 -64px;
+}
+
+
+//detail_messages留言模块
+.detail .detail_messages{
+    .message{
+        .title{
+            font-size: 20px;
+            color: @second-color;
+            line-height: 1.5;
+            p{
+                span{
+
+                }
+            }
+        }
+        .text{
+            width: 100%;
+            height: 188px;
+            border: 1px solid @step-line-color;
+        }
+        .submit{
+            float:right;
+            width: 120px;
+            height: 40px;
+            background-color: @primary-color;
+            border-radius: 5px;
+            margin-top:15px;
+        }
+    }
+    .messages{
+
+    }
+}

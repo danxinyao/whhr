@@ -1,0 +1,29 @@
+//页面宽度
+@base: 1190px;
+//页面间距
+@basePadding: 30px;
+
+//色调
+@primary-color: #f28100; // 主色调
+@base-color: #333333; // 一级颜色
+@second-color: #666666; // 二级颜色
+@explain-color: #999999; // 三级颜色
+@warn-color: #e70012; // 警告
+@success-color: #08b006; // 成功
+@white-color: #fff;
+@match-color: #f2f2f2;
+@headtop-bg-color: #f8f8f8; // 导航头部背景色
+@headtop-border-color: #d8d8d8; // 导航头部下划线
+@headmenu-border-color: #f28300;
+@step-line-color: #cccccc; //步骤条线颜色
+@decor-step-color: #fafafa; // 首页装修流程背景图
+@opacity: 0.6;
+
+//多行文本截断
+.lineClamp(@line:1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+}

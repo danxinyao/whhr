@@ -1,0 +1,351 @@
+@import "./_variables";
+
+//  重置浏览器样式
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+// 最小屏幕1200px
+html {
+    height: 100%;
+    font-family: '微软雅黑';
+}
+body {
+    min-width: @base;
+    height: 100%;
+}
+input:focus {
+    outline: 0;
+}
+
+.base {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+// 清除浮动
+.clearfix {
+    *zoom: 1;
+    display: block;
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.box {
+    position: relative;
+    width: @base;
+    margin: 0 auto;
+}
+
+.flex.space_justify {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.flex {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+}
+
+.flex.space_justify li {
+    text-align: right;
+}
+
+.flex.space_around li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; 
+    text-align: center;
+}
+
+//分页
+.page {
+    text-align: center;
+}
+.page ul {
+    display: inline-block;
+}
+.page li {
+    cursor: pointer;
+    float: left;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    border-left-width: 1px;
+    border-right-width: 0;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    color: @base-color;
+    background: @white-color;
+    border-color: @match-color;
+}
+
+.page li.active, .page li:hover {
+    border-top-color: @primary-color;
+    border-bottom-color: @primary-color;
+    background: @primary-color;
+    color: @white-color;
+}
+
+.page li.disabled {
+    cursor: not-allowed;
+}
+
+.page li.prev, .page li.next {
+    width: 90px;
+}
+
+.page li:last-child {
+    border-right-width: 1px;
+}
+
+//面包屑
+.breadcrumd {
+    height: 50px;
+    line-height: 50px;
+    color: @second-color;
+    font-size: 12px;
+    span, a {
+        color: @second-color;
+        font-size: 12px;
+    }
+    a:hover {
+        color: @primary-color;
+    }
+}
+
+//标签
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px @match-color solid;
+    font-size: 12px;
+    color: @second-color;
+}
+
+.tag:not(:last-child) {
+    margin-right: 10px;
+}
+
+.tag span , .tag a {
+    display: inline-block;
+    color: @second-color;
+}
+
+.tag a {
+    color: #ccc;
+    i {
+        font-weight: 900;
+        font-size: 10px;
+    }
+}
+
+//步骤条
+.steps {
+    font-size: 0;
+}
+
+.steps .step:first-child .step_line {
+    left: 50%;
+}
+
+.steps .step:last-child .step_line {
+    right: 50%;
+}
+
+.step {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    color: @white-color;
+    .step_icon {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        line-height: 30px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    .step_line {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        right: 0;
+        height: 4px;
+    }
+    .step_main {
+        text-align: center;
+    }
+    .step_title {
+        color: @base-color;
+        font-size: 14px;
+        padding: 10px 0 3px 0;
+    }
+    .step_description {
+        color: @explain-color;
+        font-size: 12px;
+    }
+}
+.step.default {
+    .step_icon, .step_line {
+        background: @step-line-color;
+    }
+}
+.step.process {
+    .step_icon, .step_line {
+        background: @warn-color;
+    }
+}
+.step.finish {
+    .step_icon, .step_line {
+        background: @success-color;
+    }
+}
+
+// swiper
+.swiper-container {
+    max-height: 600px;
+    overflow: hidden;
+    .swiper-slide img {
+        width: 100%;
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            opacity: 0.4;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 0.9;
+        }
+    }
+}
+
+.form {
+    color: @base-color;
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.form .form-item:not(:last-child) {
+    padding-bottom: 15px;
+}
+
+.form-item-select {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+.form-item.group .form-item-select {
+    display: inline-block;
+}
+
+.form-item.group .form-item-select:first-child {
+    float: left;
+}
+
+.form-item.group .form-item-select:last-child {
+    float: right;
+}
+
+.form-item-select:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -4px;
+    width: 0;
+    height: 0;
+    border-top-width: 7px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-style: solid;
+    border-color: @base-color transparent transparent transparent;
+    line-height: 0;
+}
+
+.form-item-select select, .form-item-input, .form-item-textarea {
+    padding: 0 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    outline: none;
+    border: 0 none;
+    width: 100%;
+    overflow: hidden;
+    background: none;
+    background-color: transparent;
+    height: 40px;
+}
+
+.form-item-textarea {
+    resize: none;
+    wrap: virtual;
+}
+
+.form-item-input {
+    line-height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-item-submit {
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: @white-color;
+    display: block;
+    background: @primary-color;
+    transition: all .2s;
+}
+.form-item-submit:hover {
+    opacity: 0.8;
+}
